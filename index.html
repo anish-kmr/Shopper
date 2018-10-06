@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>PROJECT</title>
+	<link rel="stylesheet" type="text/css" href="src/css/index.css">
+
+	
+
+</head>
+<body>
+	<header>
+		<div>
+			<ul>
+				<li class="header-list">SEARCH</li>
+				<li class="header-list">HOME</li>
+
+				<li class="header-list"><a href="">SHOPPER</a></li>
+
+				<li class="header-list" id="login">LOGIN</li>
+				<li class="header-list" id="signup">SIGNUP</li>
+			</ul>
+		</div>
+		
+	</header>
+
+
+	<div class="modal">
+		
+		<div class="modal-header">
+			<h1 class="cross">&times;</h1>
+			<h1 class="login-title">LOGIN</h1>
+		</div>
+		<div class="modal-body">
+			<form action="">
+				<div class="form-group">
+					<label for="username">
+						<img src="src/images/email.svg" alt="" class="icon">
+					</label>
+					<input type="email" id="username" placeholder="EMAIL" required>
+				</div>
+
+				<div class="form-group">
+					<label for="pwd">
+						<img src="src/images/lock.svg" alt="" class="icon">
+					</label>
+					<input type="password" id="pwd" placeholder="PASSWORD" required>
+				</div>
+				<div class="form-group" align="center">
+					<div class="submit" align="center" id="login-sub"><a id="passed">SUBMIT</a></div>
+				</div>
+
+
+			</form>
+		</div>
+	</div>
+
+
+	<div class="modal">
+		
+		<div class="modal-header">
+			<h1 class="cross">&times;</h1>
+			<h1 class="login-title">SIGNUP</h1>
+		</div>
+		<div class="modal-body">
+			<h3>SIGNUP Feature is not yet added.You can signin using following:</h3>
+			<br>
+			<table border="1" cellspacing="5" >
+				<tr>
+					<th >USERNAME</th>
+					<th>PASSWORD</th>
+				</tr>
+				<tr>
+					<td>anish</td>
+					<td>anish123</td>
+				</tr>
+				<tr>
+					<td>chandan</td>
+					<td>ck123</td>
+				</tr>
+			</table>
+
+		</div>
+	</div>
+
+	<div class="banner">
+		
+	</div>
+	<div class="main">
+		<aside>
+			<h1>
+				CATEGORIES
+			</h1>
+			<ul>
+				<li class="categories">FASHION</li>
+				<li class="categories">FORMALS</li>
+				<li class="categories">WATCHES</li>
+				<li class="categories">FOOTWEAR</li>
+			</ul>
+
+		</aside>
+		<div class="items">
+			<div class="display">
+				<!-- CONTENT FROM DATA.JSON -->
+			</div>
+		</div>
+	</div>
+
+	
+	<script src="src/js/data.json"></script>
+	<script src="src/js/pass.json"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="src/js/index.js"></script>
+	<script type="text/javascript" src="src/js/lib.js"></script>
+</body>
+</html>

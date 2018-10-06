@@ -1,0 +1,41 @@
+*{}
+.row{
+
+	display: grid;
+	grid-template-columns: 15% 30% 30% auto;
+	align-items: center;
+	margin:0;
+	padding:1.5rem; 
+
+}
+.row .img img{
+	width: 10rem;
+	height: 10rem;
+}
+
+.qty{
+	position: relative;
+}
+.ctrl-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+#amount{
+	font-size: 4rem;
+
+}
+.qty-ctrl,#amount{
+	width: 2.5rem;
+	height: 2.5rem;
+
+}
+.row:nth-child(odd){
+	background-color:#f4f4f4;
+}
+.row:nth-child(even){
+	background-color:#fcfcfc;
+}

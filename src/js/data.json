@@ -1,0 +1,27 @@
+let data=[
+{
+	"id" : "1",
+	"name" : "BLUE CHECKED SHIRT",
+	"price" : "12"
+},
+{
+	"id" : "2",
+	"name" : "DENIM JEANS",
+	"price" : "35"
+},
+{
+	"id" : "3",
+	"name" : "LAPTOP BACKPACK",
+	"price" : "15"
+},
+{
+	"id" : "4",
+	"name" : "SPORT SHOES",
+	"price" : "19"
+},
+{
+	"id" : "5",
+	"name" : "FORMAL WEARS",
+	"price" : "43"
+}
+]
