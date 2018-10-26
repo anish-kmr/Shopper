@@ -1,14 +1,16 @@
 window.addEventListener('load', ()=>{
 
-	let  per=JSON.parse(localStorage.getItem(localStorage.uname));
-	console.log(per.cart);
-	for(key in per){
-		if(key=="count"){
-			document.getElementById('count').innerHTML=per.count;
-			break;
-		}
-	}
-	AddToCart();
+	console.log("hello");
+	let home=document.getElementsByClassName("header-list")[2];
+	home.addEventListener('click', ()=>{
+		alert("Login again and then Logout to prevent Data Loss");
+	})
+
+	let logout=document.getElementById('logout');
+	logout.addEventListener('click', ()=>{
+		alert("logged out");
+		window.location.href="logout.php";
+	})
 
 
 
@@ -17,54 +19,61 @@ window.addEventListener('load', ()=>{
 })
 
 
-let AddToCart=()=>{
-	let  per=JSON.parse(localStorage.getItem(localStorage.uname));
-	let main=document.getElementsByClassName('main')[0];
-	let html=``;
-	let c=per.cart;
-	console.log('c  ; ',c)
-	for(let i=0;i<c.length;i++){
-		let id = parseInt(c[i].id);
-		let price=0;
-		let name="";
-		let amt=c[i].quantity;
-		for(let j=0;j<data.length;j++){
-			if(data[j].id==id){
-				price=data[j].price;
-				name=data[j].name;
-			}
-		}
-		html+=`
-			<div class="row" id="row-${id}">
-				<div class="img">
-					<img src="src/images/${id}.jpg" alt="">
-				</div>
-				<div class="info">
-					<h1>${name}</h1>
+// let AddToCart=()=>{
+// 	// let  per=JSON.parse(localStorage.getItem(localStorage.uname));
+// 	// let main=document.getElementsByClassName('main')[0];
+// 	// let html=``;
+// 	// let c=per.cart;
+// 	// console.log('c  ; ',c)
+// 	// for(let i=0;i<c.length;i++){
+// 	// 	let id = parseInt(c[i].id);
+// 	// 	let price=0;
+// 	// 	let name="";
+// 	// 	let amt=c[i].quantity;
+// 	// 	for(let j=0;j<data.length;j++){
+// 	// 		if(data[j].id==id){
+// 	// 			price=data[j].price;
+// 	// 			name=data[j].name;
+// 	// 		}
+// 	// 	}
+// 	let mycart = document.cookie;
+// 	$.serialize(mycart);
+// 	alert(mycart);
+// 		html+=`
+// 			<div class="row" id="row-${id}">
+// 				<div class="img">
+// 					<img src="src/images/${id}.jpg" alt="">
+// 				</div>
+// 				<div class="info">
+// 					<h1>${name}</h1>
 
-				</div>
-				<div class="rate" align="center">
-					<h1>PRICE</h1>
-					<h2>$${price}</h2>
-				</div>
-				<div class="qty">
-					<div class="ctrl-box">
-						<div id="minus-${id}" class="minus">
-							<img src="src/images/minus.svg" alt=""  id="minus-img-${id}" class="qty-ctrl">
-						</div>
-						<div id="amount-${id}" align="center">${amt}</div>
-						<div id="plus-${id}" class="plus">
-							<img src="src/images/plus.svg" alt="" id="plus-img-${id}" class="qty-ctrl">
-						</div>
-					</div>
-				</div>
-			</div>
-			`
-	}
-	main.innerHTML+=html;
-	addEventP();
-	addEventM();
-}
+// 				</div>
+// 				<div class="rate" align="center">
+// 					<h1>PRICE</h1>
+// 					<h2>$${price}</h2>
+// 				</div>
+// 				<div class="qty">
+// 					<div class="ctrl-box">
+// 						<div id="minus-${id}" class="minus">
+// 							<img src="src/images/minus.svg" alt=""  id="minus-img-${id}" class="qty-ctrl">
+// 						</div>
+// 						<div id="amount-${id}" align="center">${amt}</div>
+// 						<div id="plus-${id}" class="plus">
+// 							<img src="src/images/plus.svg" alt="" id="plus-img-${id}" class="qty-ctrl">
+// 						</div>
+// 					</div>
+// 				</div>
+// 			</div>
+// 			`
+// 	// }
+// 	main.innerHTML+=html;
+// 	addEventP();
+// 	addEventM();
+// }
+
+
+
+
 
 addEventP=()=>{
 	let plus=document.getElementsByClassName('plus');
@@ -161,3 +170,5 @@ sub=(event)=>{
 
 
 }
+
+

@@ -30,7 +30,6 @@ body{
 	--bg-color:#D0D3C5;
 }
 header{
-	
 	background-color: var(--dark-blue);
 	transition: .2s all;
 	padding:1rem; 
@@ -184,10 +183,15 @@ header ul{
 	border-bottom: 1px solid grey;
 	border-bottom-left-radius: 20%;
 }
-
+.small{
+	font-size:10px;
+}
 .submit:hover{
 	background-color: var(--red);
 	cursor: pointer;
+}
+.small{
+	font-size: 10px;
 }
 .submit a{
 	text-decoration: none;
